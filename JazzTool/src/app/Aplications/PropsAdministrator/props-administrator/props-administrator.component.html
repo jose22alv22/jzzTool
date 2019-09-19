@@ -1,0 +1,105 @@
+<div class="container" id="userspage">
+  <div class="title">
+    <h1>PROPS ADMINISTRATOR</h1>
+  </div>
+  <div class= "selectWrapper">
+      <select>
+        <option value="0">CBB:</option>
+        <option value="1">CFB</option>
+      </select>
+    </div>
+    <div class= "selectWrapper">
+        <select>
+          <option value="0">Game:</option>
+          <option value="1">Player</option>
+        </select>
+      </div>
+    <table class="table table-striped table-dark" >
+      <thead>
+        <tr>
+          <th>IdSport</th>
+          <th>Prop</th>
+          <th>AwayTeam</th>
+          <th>HomeTeam</th>
+          <th>AwayTeam</th>
+          <th>PropType</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of _props">
+          <td>{{item.IdSport}}</td>
+          <td>{{item.Prop}}</td>
+          <td>{{item.AwayTeam}}</td>
+          <td>{{item.HomeTeam}}</td>
+          <td>{{item.AwayTeam}}</td>
+          <td>{{item.PropType}}</td>
+          <td>{{item.Position}}
+              <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<!-- 
+<div class="form-style-5">
+  <fieldset>
+    <div style="text-align:center">
+      <legend>
+        Players Payment
+      </legend>
+    </div>
+    <div *ngIf="_report?.length > 1" style="text-align:center">
+      <table style="margin: 0 auto;border: 1px;" class="table-responsive" [mfData]="_report" #mf="mfDataTable"
+        [mfRowsOnPage]="10">
+        <thead>
+          <tr>
+            <input (keyup)="Filter($event)" [(ngModel)]="_model.Data" type="text" placeholder="Player Name">
+          </tr>
+          <tr>
+            <th scope="col">PLAYER</th>
+            <th scope="col">PASSWORD</th>
+            <th scope="col">CREDIT LIMIT</th>
+            <th scope="col">BALANCE</th>
+            <th scope="col">CASH IN (RECEIPT)</th>
+            <th scope="col">PAYOUT (DISBURSEMENT)</th>
+            <th scope="col">SPORTS ADJUSTMENT (+/-)</th>
+            <th scope="col">FREEPLAY (+/-)</th>
+            <th scope="col">NEW BALANCE</th>
+            <th scope="col">SAVE CHANGES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let report of mf.data">
+            <td>{{report.Player}}</td>
+            <td>{{report.Password}}</td>
+            <td><input type="text" [(ngModel)]="report.creditlimit" pInputText pKeyFilter="money"
+                placeholder="{{report.creditlimit}}" required></td>
+            <td>{{report.CurrentBlanace}}</td>
+            <td><input type="text" [(ngModel)]="report.paymentToProcess" pInputText pKeyFilter="money"
+                placeholder="{{report.paymentToProcess}}" /></td>
+            <td><input type="text" [(ngModel)]="report.payoutToProcess" pInputText pKeyFilter="money"
+                placeholder="{{report.payoutToProcess}}" /></td>
+            <td><input type="text" [(ngModel)]="report.adjustmentToProcess" pInputText pKeyFilter="money"
+                placeholder="{{report.adjustmentToProcess}}" /></td>
+            <td><input type="text" [(ngModel)]="report.freeplayToProcess" pInputText pKeyFilter="money"
+                placeholder="{{report.freeplayToProcess}}" /></td>
+            <td>{{report.NewBalance}}</td>
+            <td>
+              <button (click)="UpdatePayments(report)">SAVE CHANGES</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <mfBootstrapPaginator></mfBootstrapPaginator>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </fieldset>
+</div> -->
