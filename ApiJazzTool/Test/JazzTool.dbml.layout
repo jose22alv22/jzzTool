@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="JazzTool">
+  <DataContextMoniker Name="/JazzToolDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aab5d10c-25f6-425b-a6f2-7c39daaa4710" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/JazzToolDataContext/sport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="643a2e08-d8cc-4144-aef3-48f81f406057" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e97825c7-4090-4c04-89cf-fd60d511aa4a" absoluteBounds="3.5, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/JazzToolDataContext/PropTypeBySport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6667a5bb-88de-4abd-b022-2973b5b2da8c" absoluteBounds="3.515, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45927740-a209-4c6a-8aa3-dc686fce9cbc" absoluteBounds="0.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/JazzToolDataContext/PropType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c4b9039-e0e3-4b1e-b7c2-cdfb9cd569d3" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a175d575-6afa-48cd-9f66-7d298536d045" absoluteBounds="6.25, 4.75, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/JazzToolDataContext/Prop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed69a60a-a6c1-468e-9a5e-79d40005c53a" absoluteBounds="6.265, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f597e7f5-ced9-4d2c-ace6-c0b1555126fb" absoluteBounds="9, 3.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/JazzToolDataContext/PropByPosition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96f20449-351d-4a66-8114-c8071ac00c9e" absoluteBounds="9.015, 3.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f1fde42-593c-4adc-a5a8-a137d7e62a73" absoluteBounds="6.25, 2.25, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/JazzToolDataContext/Position" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7abc60f-2c8f-4c32-8ac4-a6c87625cd37" absoluteBounds="6.265, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.63544840494792); (4.5 : 1.63544840494792); (4.5 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/sport/sport_PropTypeBySport" />
+      <nodes>
+        <classShapeMoniker Id="aab5d10c-25f6-425b-a6f2-7c39daaa4710" />
+        <classShapeMoniker Id="e97825c7-4090-4c04-89cf-fd60d511aa4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.66429768880208); (3.5 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/PropType/PropType_PropTypeBySport" />
+      <nodes>
+        <classShapeMoniker Id="45927740-a209-4c6a-8aa3-dc686fce9cbc" />
+        <classShapeMoniker Id="e97825c7-4090-4c04-89cf-fd60d511aa4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.13544840494792); (6.25 : 5.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/PropTypeBySport/PropTypeBySport_Prop" />
+      <nodes>
+        <classShapeMoniker Id="e97825c7-4090-4c04-89cf-fd60d511aa4a" />
+        <classShapeMoniker Id="a175d575-6afa-48cd-9f66-7d298536d045" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.20274983723958); (9 : 5.20274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/Prop/Prop_PropByPosition" />
+      <nodes>
+        <classShapeMoniker Id="a175d575-6afa-48cd-9f66-7d298536d045" />
+        <classShapeMoniker Id="f597e7f5-ced9-4d2c-ace6-c0b1555126fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.76044840494792); (9 : 3.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/Position/Position_PropByPosition" />
+      <nodes>
+        <classShapeMoniker Id="4f1fde42-593c-4adc-a5a8-a137d7e62a73" />
+        <classShapeMoniker Id="f597e7f5-ced9-4d2c-ace6-c0b1555126fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312525 : 3.75); (5.0312525 : 2.9687475); (6.25 : 2.9687475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/JazzToolDataContext/PropTypeBySport/PropTypeBySport_Position" />
+      <nodes>
+        <classShapeMoniker Id="e97825c7-4090-4c04-89cf-fd60d511aa4a" />
+        <classShapeMoniker Id="4f1fde42-593c-4adc-a5a8-a137d7e62a73" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
