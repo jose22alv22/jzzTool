@@ -6,6 +6,11 @@ import { PropsAdministratorComponent } from './Aplications/PropsAdministrator/pr
 import { PropsCreatorComponent } from './Aplications/PropsCreator/props-creator/props-creator.component';
 import { PropsCreationComponent } from './Aplications/PropsCreation/props-creation/props-creation.component';
 import { ToolMakerComponent } from './Aplications/ToolMaker/tool-maker/tool-maker.component';
+import { ReportsComponent } from './Aplications/Reports/reports/reports.component';
+import { WeeklyBalanceReportComponent } from './Aplications/Reports/weekly-balance-report/weekly-balance-report.component';
+import { GameStatisticsReportComponent } from './Aplications/Reports/game-statistics-report/game-statistics-report.component';
+import { ActionByPlayerComponent } from './Aplications/Reports/action-by-player/action-by-player.component';
+
 
 
 
@@ -17,7 +22,14 @@ const routes: Routes = [
     { path: 'props-administrator', component: PropsAdministratorComponent },
     { path: 'props-creator', component: PropsCreatorComponent },
     { path: 'props-creation', component: PropsCreationComponent },
-    { path: 'tool-maker', component: ToolMakerComponent }
+    { path: 'tool-maker', component: ToolMakerComponent },
+    { path: 'reports', component: ReportsComponent,
+    children: [
+      { path: 'weekly-balance-report', component: WeeklyBalanceReportComponent },
+      { path: 'game-statistics-report', component: GameStatisticsReportComponent },
+      { path: 'props-administrator', component: ActionByPlayerComponent },
+      ]
+    }
   ]
 }
 ];

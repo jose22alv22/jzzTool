@@ -17,6 +17,10 @@ import { PropsCreatorComponent } from './Aplications/PropsCreator/props-creator/
 import { PropsAdministratorComponent } from './Aplications/PropsAdministrator/props-administrator/props-administrator.component';
 import { PropsCreationComponent } from './Aplications/PropsCreation/props-creation/props-creation.component';
 import { ToolMakerComponent } from './Aplications/ToolMaker/tool-maker/tool-maker.component';
+import { WeeklyBalanceReportComponent } from './Aplications/Reports/weekly-balance-report/weekly-balance-report.component';
+import { GameStatisticsReportComponent } from './Aplications/Reports/game-statistics-report/game-statistics-report.component';
+import { ActionByPlayerComponent } from './Aplications/Reports/action-by-player/action-by-player.component';
+import { ReportsComponent } from './Aplications/Reports/reports/reports.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { ToolMakerComponent } from './Aplications/ToolMaker/tool-maker/tool-make
     PropsCreatorComponent,
     PropsAdministratorComponent,
     PropsCreationComponent,
-    ToolMakerComponent
+    ToolMakerComponent,
+    WeeklyBalanceReportComponent,
+    GameStatisticsReportComponent,
+    ActionByPlayerComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
