@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/Services/General/login.service';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private toast: ToastrService,
     public router: Router,
+    private _login: LoginService
   ) { }
 
   ngOnInit() {
@@ -26,29 +28,30 @@ export class LoginComponent implements OnInit {
 
   public loginSignUpAdmin() {
     try {
-      if(this._username == 'jazztool' && this._password == '123'){
-        console.log("Entro");
-        this.router.navigate(['/menu']);
+      if(this._username != "" || this._username != null && this._password != "" || this._password != null){
+        this._login.getUser('http://localhost:22814/api/', this._username.toUpperCase(), this._password.toUpperCase())
+        .subscribe(resp => {
+          console.log(resp);
+          if (resp != null) {
+            this.router.navigate(['/menu']);
+            localStorage.setItem("user", JSON.stringify(resp));
+          }
+          else
+            this.toast.error('Incorrect username or password', 'Notification!');
+          this.model.isBusy = false;
+        }, error => {
+          this.model.isBusy = false;
+          this.toast.error(error, 'Notification!');
+        }, () => {
+          // this.router.navigate(['/main/home']);
+        });
       }
       else{
         console.log("no Entro");
       }
-      // this._login.loginSignUpAdmin(this._configData.webApiUrl, this.model.username.toUpperCase(), this.model.password)
-      //   .subscribe(resp => {
-      //     if (resp != null) {
-      //       localStorage.setItem("user", JSON.stringify(resp));
-      //       this.router.navigate(['/main/home']);
-      //     }
-      //     else
-      //       this.toast.error('Incorrect username or password', 'Notification!');
-      //     this.model.isBusy = false;
-      //   }, error => {
-      //     this.model.isBusy = false;
-      //     this.toast.error(error, 'Notification!');
-      //   }, () => {
-      //     // this.router.navigate(['/main/home']);
-      //   });
+  
     } catch (error) {
+      console.log(error);
       console.log("esta aca");
     }
   }

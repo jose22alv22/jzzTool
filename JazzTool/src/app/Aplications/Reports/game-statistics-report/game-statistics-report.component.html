@@ -1,1 +1,51 @@
-<p>game-statistics-report works!</p>
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:powderblue;">
+    <h1>Game Statistics Report</h1>
+    <table>
+        <tr>
+            <td>
+                From:
+                <br>
+                <input type="date" name="bday">
+            </td>
+            <td>
+                Book:
+                <br>
+                <input type="text" name="_book" class="form-control" placeholder="Book" [(ngModel)]="_book">
+            </td>
+            <td>
+                Player:
+                <br>
+                <input type="text" name="_player" class="form-control" placeholder="player" [(ngModel)]="_player">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                League:
+                <br>
+                <input type="text" name="_league" class="form-control" placeholder="League" [(ngModel)]="_league">
+            </td>
+            <td>
+                Office:
+                <br>
+                <input type="text" name="_office" class="form-control" placeholder="Office" [(ngModel)]="_office">
+            </td>
+        </tr>
+    </table>
+    <p>Group By:</p>
+    <input type="radio" name="gender" value="None"> None
+    <input type="radio" name="gender" value="Office"> Office
+    <input type="radio" name="gender" value="Player"> Players
+    <p>Order By:</p>
+    <input type="radio" name="gender" value="Sport"> Sport
+    <input type="radio" name="gender" value="Period"> Period
+    <input type="radio" name="gender" value="BetType"> Bet Type
+    <input type="radio" name="gender" value="Play"> Play
+    <br>
+    <br>
+    <button class="button button2">OK</button>
+</body>
+
+</html>

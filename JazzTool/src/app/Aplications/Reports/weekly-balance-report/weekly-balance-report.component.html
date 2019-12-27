@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
-<h1>Weekly Balance</h1>
-</body>
-</html>
 
+<body style="background-color:powderblue;">
+    <h1>Weekly Balance</h1>
+    <table>
+        <tr>
+            <td>
+                Week Of:
+                <br>
+                <input type="date" name="bday">
+            </td>
+            <td>
+                Office:
+                <br>
+                <input type="text" name="_office" class="form-control" placeholder="Office" [(ngModel)]="_office">
+            </td>
+            <td>
+                Agent:
+                <br>
+                <input type="text" name="_agentFrom" class="form-control" placeholder="Agent" [(ngModel)]="_agentFrom">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Distributor:
+                <br>
+                <input type="text" name="_distributor" class="form-control" placeholder="Distributor" [(ngModel)]="_distributor">
+            </td>
+            <td>
+                Line Type:
+                <br>
+                <input type="text" name="_linetype" class="form-control" placeholder="LineType" [(ngModel)]="_linetype">
+            </td>
+            <td>
+                Group:
+                <br>
+                <input type="text" name="_group" class="form-control" placeholder="Group" [(ngModel)]="_group">
+            </td>
+        </tr>
+    </table>
+    <p>Players Selection:</p>
+    <input type="radio" name="gender" value="NonZero"> Non Zero
+    <input type="radio" name="gender" value="AllPlayers"> All Players
+    <input type="radio" name="gender" value="ActivePlayers"> Active Players
+    <p>Report Type:</p>
+    <input type="radio" name="gender" value="Default"> Default
+    <input type="radio" name="gender" value="female"> Details
+    <input type="radio" name="gender" value="WithName"> With Name
+    <br>
+    <br>
+    <button class="button button2">OK</button>
+
+</body>
+
+</html>

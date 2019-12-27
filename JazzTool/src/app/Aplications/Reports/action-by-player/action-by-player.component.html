@@ -1,1 +1,63 @@
-<p>action-by-player works!</p>
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:powderblue;">
+    <h1>Action By Player</h1>
+    <table>
+        <tr>
+            <td>
+                From:
+                <br>
+                <input type="date" name="bday">
+            </td>
+            <td>
+                To:
+                <br>
+                <input type="date" name="bday">
+            </td>
+            <td>
+                Office:
+                <br>
+                <input type="text" name="_office" class="form-control" placeholder="Office" [(ngModel)]="_office">
+            </td>
+            <td>
+                Group:
+                <br>
+                <input type="text" name="_group" class="form-control" placeholder="Group" [(ngModel)]="_group">
+            </td>
+            <td>
+                Book:
+                <br>
+                <input type="text" name="_group" class="form-control" placeholder="Group" [(ngModel)]="_group">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Distributor:
+                <br>
+                <input type="text" name="_distributor" class="form-control" placeholder="Distributor" [(ngModel)]="_distributor">
+            </td>
+            <td>
+                Agent:
+                <br>
+                <input type="text" name="_agentFrom" class="form-control" placeholder="Agent" [(ngModel)]="_agentFrom">
+            </td>
+            <td>
+                Line Type:
+                <br>
+                <input type="text" name="_linetype" class="form-control" placeholder="LineType" [(ngModel)]="_linetype">
+            </td>
+        </tr>
+    </table>
+    <p>Players Type:</p>
+    <input type="radio" name="gender" value="Both"> Non Zero
+    <input type="radio" name="gender" value="Cash"> All Players
+    <input type="radio" name="gender" value="Credit"> Active Players
+    <br>
+    <br>
+    <input type="checkbox" name="GroupAgent" value="GroupAgent"> Group By Agent
+    <br>
+    <button class="button button2">OK</button>
+</body>
+
+</html>

@@ -21,6 +21,7 @@ import { WeeklyBalanceReportComponent } from './Aplications/Reports/weekly-balan
 import { GameStatisticsReportComponent } from './Aplications/Reports/game-statistics-report/game-statistics-report.component';
 import { ActionByPlayerComponent } from './Aplications/Reports/action-by-player/action-by-player.component';
 import { ReportsComponent } from './Aplications/Reports/reports/reports.component';
+import { PropsTraductionComponent } from './Aplications/PropsTraduction/props-traduction/props-traduction.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ReportsComponent } from './Aplications/Reports/reports/reports.componen
     WeeklyBalanceReportComponent,
     GameStatisticsReportComponent,
     ActionByPlayerComponent,
-    ReportsComponent
+    ReportsComponent,
+    PropsTraductionComponent
   ],
   imports: [
     BrowserModule,

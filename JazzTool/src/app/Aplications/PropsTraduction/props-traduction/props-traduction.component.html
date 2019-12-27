@@ -1,0 +1,33 @@
+<div class="container" id="userspage">
+    <div class="title">
+        <h1>PROPS TRADUCTION</h1>
+    </div>
+</div>
+<table class="table table-dark table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">Language</th>
+        <th scope="col">Visitor Team</th>
+        <th scope="col">Home Team</th>
+        <th scope="col">Description</th>
+        <th scope="col">Tanslated Visitor Team</th>
+        <th scope="col">Translated Home Team</th>
+        <th scope="col">Translated Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let props of _PropsTraduction">
+        <td>{{props.Language}}</td>
+        <td>{{props.Description}}</td>
+        <td>{{props.VisitorTeam}}</td>
+        <td>{{props.HomeTeam}}</td>
+        <td>{{props.TraslatedDescription}}</td>
+        <td>{{props.TraslatedVisitorTeam}}</td>
+        <td>{{props.TraslatedHomeTeam}}</td>
+        <td><button type="button" class="btn btn-warning">Edit</button></td>
+        <td><button type="button" class="btn btn-danger">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
