@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 30px;
+    border-bottom: double;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.container-fluid {
+    position: relative;
+    font-family: Arial;
+}
+
+.mt-n1 {
+    margin-top: -0.25rem !important;
+}
+
+.ml {
+    margin-left: 85px !important;
+}

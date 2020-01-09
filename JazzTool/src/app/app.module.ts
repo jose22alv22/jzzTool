@@ -7,8 +7,7 @@ import { MenuComponent } from './Common/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuModule } from 'primeng/menu';
 import { ToastModule } from 'primeng/toast';
-import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api';
+import { DropdownModule } from 'primeng/dropdown';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +21,9 @@ import { GameStatisticsReportComponent } from './Aplications/Reports/game-statis
 import { ActionByPlayerComponent } from './Aplications/Reports/action-by-player/action-by-player.component';
 import { ReportsComponent } from './Aplications/Reports/reports/reports.component';
 import { PropsTraductionComponent } from './Aplications/PropsTraduction/props-traduction/props-traduction.component';
-
+import { EarlyParlayPayoutComponent } from './Aplications/early-parlay-payout/early-parlay-payout.component';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,17 @@ import { PropsTraductionComponent } from './Aplications/PropsTraduction/props-tr
     GameStatisticsReportComponent,
     ActionByPlayerComponent,
     ReportsComponent,
-    PropsTraductionComponent
+    PropsTraductionComponent,
+    EarlyParlayPayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MenuModule,
+    DropdownModule,
+    ButtonModule,
+    TableModule,
     //Component,
     //MessageService,
     AccordionModule,

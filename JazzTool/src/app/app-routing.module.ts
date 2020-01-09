@@ -11,6 +11,7 @@ import { WeeklyBalanceReportComponent } from './Aplications/Reports/weekly-balan
 import { GameStatisticsReportComponent } from './Aplications/Reports/game-statistics-report/game-statistics-report.component';
 import { ActionByPlayerComponent } from './Aplications/Reports/action-by-player/action-by-player.component';
 import { PropsTraductionComponent } from './Aplications/PropsTraduction/props-traduction/props-traduction.component';
+import { EarlyParlayPayoutComponent } from './Aplications/early-parlay-payout/early-parlay-payout.component'
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
     { path: 'props-creation', component: PropsCreationComponent },
     { path: 'props-traduction', component: PropsTraductionComponent },
     { path: 'tool-maker', component: ToolMakerComponent },
+    { path: 'early-parlay-payouts', component: EarlyParlayPayoutComponent},
     { path: 'reports', component: ReportsComponent,
     children: [
       { path: 'weekly-balance-report', component: WeeklyBalanceReportComponent },

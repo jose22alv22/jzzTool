@@ -1,0 +1,56 @@
+<div class="container" id="userspage">
+    <div class="title">
+        <h1>EARLY PARLAY PAYOUTS</h1>
+    </div>
+    <div class="container-fluid">
+
+        <table class="egt">
+            <tr>
+                <td>
+                    <p class="text-white bg-dark">
+                        Select a Type the Early Parlay Payout:</p>
+                </td>
+                <td>
+                    <p-dropdown class="ml" [options]="TypeEPP" [options]="TypeEPP" [(ngModel)]="EarlyParlayPayoutType" (onChange)="getTypeEarlyParlayPayout()" placeholder="Type" optionLabel="TypeEPPName"></p-dropdown>
+                </td>
+                <td>
+                    <input class="ml" id="float-input" type="text" [(ngModel)]="EPPType" style="width:100%" placeholder="Name">
+                </td>
+                <td>
+                    <input class="ml" type="button" label="Search" value="SEARCH" (click)="getEPPType()">
+                    <!-- <button type="button" label="Search" id="btnEarlyParlayPayouts" (click)="getEPPType()"> -->
+                </td>
+            </tr>
+        </table>
+        <h3>Parley Players</h3>
+        <p-table [value]="_parleyPlayers" [(selection)]="_parleyPlayerSelected">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th style="width: 3em">
+                        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                    </th>
+                    <th *ngFor="let col of cols">
+                        {{col.header}}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr [pSelectableRow]="rowData">
+                    <td>
+                        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+                    </td>
+                    <td *ngFor="let col of cols">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="summary">
+                <ul>
+                    <li *ngFor="let _parleyPlayers of _parleyPlayerSelected" style="text-align: left">
+                        {{_parleyPlayers.Players}}
+                    </li>
+                </ul>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
